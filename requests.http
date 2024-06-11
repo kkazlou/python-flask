@@ -1,0 +1,29 @@
+@baseUrl=http://127.0.0.1:5000
+
+### /items Get all items
+GET {{baseUrl}}/items
+
+### /items Add a new item
+POST {{baseUrl}}/items
+content-type: application/json
+
+{
+    "name": "apple",
+    "price": 1
+}
+
+### /items/<id> Get a specific item
+GET {{baseUrl}}/items/123
+
+### /items/<id> Update an item
+PUT {{baseUrl}}/items/123
+content-type: application/json
+
+{
+    "name": "red apple",
+    "price": 0.8,
+    "description": "on sale"
+}
+
+### /items/<id> Delete an item
+DELETE {{baseUrl}}/items/123
